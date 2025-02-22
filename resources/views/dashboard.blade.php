@@ -20,9 +20,6 @@
                                 <th class="px-4 py-2">Penulis</th>
                                 <th class="px-4 py-2">Tahun Terbit</th>
                                 <th class="px-4 py-2">Deskripsi</th>
-                                @if(auth()->user()->hasRole('admin')) <!-- Check if the user has the admin role -->
-                                    <th class="px-4 py-2">Aksi</th>
-                                @endif
                             </tr>
                         </thead>
                         <tbody>
