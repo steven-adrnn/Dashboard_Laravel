@@ -51,6 +51,20 @@ class DashboardController extends Controller
         return redirect()->route('dashboard')->with('status', 'Book updated successfully!');
     }
 
+    public function destroy(Request $request, $id)
+    {
+        // Check if the user has the required role
+        if (!$request->user()->hasRole('admin')) {
+            return redirect()->route('dashboard')->with('error', 'You do not have permission to delete this book.');
+        }
+
+        $book = Book::findOrFail($id); // Find the book by ID
+        $book->delete(); // Delete the book
+
+        return redirect()->route('dashboard')->with('status', 'Book deleted successfully!');
+    }
+
+
     public function index()
     {
         $books = Book::all(); // Ambil semua data buku
