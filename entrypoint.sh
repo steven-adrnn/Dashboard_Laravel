@@ -1,11 +1,12 @@
 #!/bin/sh
 
-# Jalankan migrasi dan bersihkan cache
+# Jalankan migrasi & bersihkan cache
 php artisan migrate --force
 php artisan config:clear
 php artisan cache:clear
 php artisan route:clear
 php artisan view:clear
 
-# Jalankan Laravel pada port yang ditentukan Railway
+# Jalankan Laravel dengan PORT dari Railway
+echo "Starting Laravel on port $PORT..."
 php artisan serve --host=0.0.0.0 --port=$PORT
