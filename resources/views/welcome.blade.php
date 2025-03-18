@@ -61,6 +61,22 @@
                     </header>
 
                     <main class="mt-6">
+                        <h2 class="text-lg font-semibold">User Authorization Information</h2>
+                        <p>If you want to log in as an admin, use the following credentials:</p>
+                        <ul>
+                            <li>Email: admin@example.com</li>
+                            <li>Password: 12345678</li>
+                        </ul>
+                        <p>If you want to log in as an editor, use the following credentials:</p>
+                        <ul>
+                            <li>Email: editor@example.com</li>
+                            <li>Password: 12345678</li>
+                        </ul>
+                        <p>If you want to log in as a viewer, use the following credentials:</p>
+                        <ul>
+                            <li>Email: viewer@example.com</li>
+                            <li>Password: 12345678</li>
+                        </ul>
                         <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                             <!-- Removed sections for Documentation, Laracasts, Laravel News, and Vibrant Ecosystem -->
                         </div>
